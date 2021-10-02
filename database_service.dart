@@ -11,6 +11,7 @@ class DatabaseService {
     });
   }
 
+  // getting data
   getCategories({limit}) async {
     await FirebaseFirestore.instance.collection('categories').orderBy('name').limit(limit).snapshots();
   }
